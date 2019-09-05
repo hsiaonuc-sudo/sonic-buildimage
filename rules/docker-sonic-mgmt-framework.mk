@@ -20,6 +20,7 @@ $(DOCKER_MGMT-FRAMEWORK)_CONTAINER_NAME = mgmt-framework
 $(DOCKER_MGMT-FRAMEWORK)_RUN_OPT += --net=host --privileged -t
 $(DOCKER_MGMT-FRAMEWORK)_RUN_OPT += -v /etc/sonic:/etc/sonic:ro
 $(DOCKER_MGMT-FRAMEWORK)_RUN_OPT += -v /etc:/host_etc:ro
+$(DOCKER_MGMT-FRAMEWORK)_RUN_OPT += -v /etc/rest_api_keys:/etc/rest_api_keys:rw
 $(DOCKER_MGMT-FRAMEWORK)_RUN_OPT += --mount type=bind,source="/var/platform/",target="/mnt/platform/"
 
 $(DOCKER_MGMT-FRAMEWORK)_BASE_IMAGE_FILES += sonic-cli:/usr/bin/sonic-cli

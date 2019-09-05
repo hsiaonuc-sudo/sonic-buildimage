@@ -324,6 +324,9 @@ fi
 # Create dir where following scripts put their output files
 mkdir -p /var/platform
 
+# Create dir for user API Keys
+mkdir --mode=0700 -p /etc/rest_api_keys
+
 # Write contents of system EEPROM as JSON file
 /usr/bin/decode-syseeprom | /usr/bin/syseeprom-to-json > /var/platform/syseeprom
 
